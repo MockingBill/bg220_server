@@ -1,0 +1,45 @@
+[2020-02-27 10:22:26.167] [INFO] app - save_test_dataError: connect ECONNREFUSED 127.0.0.1:3306
+[2020-02-27 15:39:00.425] [INFO] app - SyntaxError: Unexpected string in JSON at position 479
+    at JSON.parse (<anonymous>)
+    at /Users/dengqian/WebstormProjects/BG220_Server/routes/index.js:32:34
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:317:13)
+    at /Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
+[2020-02-27 15:39:28.663] [INFO] app - SyntaxError: Unexpected string in JSON at position 479
+    at JSON.parse (<anonymous>)
+    at /Users/dengqian/WebstormProjects/BG220_Server/routes/index.js:32:34
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:317:13)
+    at /Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
+[2020-02-27 15:40:11.926] [INFO] app - SyntaxError: Unexpected string in JSON at position 465
+    at JSON.parse (<anonymous>)
+    at /Users/dengqian/WebstormProjects/BG220_Server/routes/index.js:32:34
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:317:13)
+    at /Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
+[2020-02-27 15:41:30.237] [INFO] app - SyntaxError: Unexpected string in JSON at position 465
+    at JSON.parse (<anonymous>)
+    at /Users/dengqian/WebstormProjects/BG220_Server/routes/index.js:33:34
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:317:13)
+    at /Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/express/lib/router/layer.js:95:5)
