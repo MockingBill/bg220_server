@@ -9,7 +9,7 @@ var uuid = require('node-uuid');
 
 
 var mysqlPoll = mysql.createPool({
-    host: '127.0.0.1',
+    host: 'mysqlIP',
     user: 'root',
     password: '198226198484dq',
     database: 'bg2020_data',
