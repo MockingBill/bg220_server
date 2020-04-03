@@ -1,21 +1,19 @@
 // 导入MySQL模块
 
-
+var config = require('../ConnConfig').config;
 var sd = require('silly-datetime');
 var async = require("async");
 var mysql = require('mysql');
 var app = require('../app');
 var uuid = require('node-uuid');
+var path = require('path');
+var fs = require('fs');
+var request = require("request");
+var ftp_service = require("./ftp_service");
+var date = require("silly-datetime");
 
 
-var mysqlPoll = mysql.createPool({
-    host: 'mysqlIP',
-    user: 'root',
-    password: '198226198484dq',
-    database: 'bg2020_data',
-    port: 3306
-});
-
+var mysqlPoll = mysql.createPool(config.mysql_config);
 
 
 /**
@@ -38,7 +36,7 @@ exports.save_report = function (value, cb) {
     var sql_is_has_check = "SELECT * FROM check_report WHERE check_id='" + value.check_id + "'";
 
     var test_data = [value.test_id, value.verify_bsss_value, value.verify_datetime_value, value.verify_ECI_value, value.verify_gps_value, value.verify_network_type_value, value.verify_TAC_value, value.verify_url_value, value.verify_system_mark];
-    var check_data = [value.check_id, value.network_operator_name, value.address, value.eci, value.tac, value.bsss, value.gps, value.network_type, value.phone_type, value.coll_time, value.download_speed, value.upload_speed, value.bsss_check, value.datetime_check, value.ECI_check, value.gps_check, value.network_type_check, value.phonenumber, value.TAC_check, value.url_check, value.test_id+"&"+value.check_id+".pcm.wav", value.username];
+    var check_data = [value.check_id, value.network_operator_name, value.address, value.eci, value.tac, value.bsss, value.gps, value.network_type, value.phone_type, value.coll_time, value.download_speed, value.upload_speed, value.bsss_check, value.datetime_check, value.ECI_check, value.gps_check, value.network_type_check, value.phonenumber, value.TAC_check, value.url_check, value.test_id + "&" + value.check_id + ".pcm.wav", value.username];
 
     /**
      * 该报告已上传成功，请勿重复上传 2
@@ -198,6 +196,77 @@ exports.save_report = function (value, cb) {
 
     });
 };
+
+exports.upload_wav_data = function (url, cb) {
+
+    dir_name = "/dir_" + date.format(new Date(), 'YYYYMMDD');
+    local_file = "../uploads/www22";
+    remote_file = path.join(dir_name, path.basename(local_file));
+    ftp_service.about_dir(dir_name);
+    ftp_service.do_put(local_file, remote_file, function (err) {
+        if (err) {
+            app.logger.info("ftp上传失败：" + err);
+            cb(false);
+        } else {
+            app.logger.info("ftp上传成功");
+            cb(true);
+        }
+    });
+
+
+};
+
+
+exports.upload_json_data = function (data_json, cb) {
+    var http_config = {
+        url: config.json_upload_url,
+        form: {
+            test_id: data_json.test_id,
+            check_id: data_json.check_id,
+            address: data_json.address,
+            eci: data_json.eci,
+            tac: data_json.tac,
+            bsss: data_json.bsss,
+            gps: data_json.gps,
+            network_type: data_json.network_type,
+            phone_type: data_json.phone_type,
+            coll_time: data_json.coll_time,
+            download_speed: data_json.download_speed,
+            upload_speed: data_json.upload_speed,
+            pcm_filepath: path.join(config.ftp_path, data_json.test_id + "&" + data_json.check_id + ".pcm.wav"),
+            username: data_json.username,
+            phonenumber: data_json.phonenumber,
+            bsss_check: data_json.bsss_check,
+            network_type_check: data_json.network_type_check,
+            gps_check: data_json.gps_check,
+            ECI_check: data_json.ECI_check,
+            TAC_check: data_json.TAC_check,
+            datetime_check: data_json.datetime_check,
+            url_check: data_json.url_check
+        }
+    };
+    request.post(http_config, function (err, response, body) {
+        if (err) {
+            app.logger.info("data con_" + err)
+            cb("0")
+        } else {
+            cb("1")
+        }
+
+    })
+};
+
+
+function cwd(dirpath) {
+    return new Promise(function (resolve, reject) {
+        client.cmd(dirpath, function (err, dir) {
+
+            resolve({err: err, dir: dir});
+        })
+
+    })
+
+}
 
 
 

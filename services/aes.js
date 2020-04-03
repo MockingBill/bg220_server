@@ -30,6 +30,10 @@ exports.decrypt = function(cryptkey, iv, encryptdata) {
 
 };
 
+
+
+
+
 /*
 console.log(aesEncrypt("在没有人的夜里","bXlEZWFyTFdX132df6bVGhlV2FudGVy"));
 

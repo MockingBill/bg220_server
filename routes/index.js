@@ -4,6 +4,7 @@ var service = require('../services/netCell_service');
 var app = require('../app');
 var crypto = require('crypto');
 var fs = require("fs");
+var path = require("path");
 
 
 var router = express.Router();
@@ -68,9 +69,11 @@ router.use(function (req, res, next) {
 router.post('/test_server', function (req, res, next) {
     try {
         var value = req.body;
-        console.log("test_server");
+        var current_file_path = path.join("../uploads/", value.test_id + "&" + value.check_id + ".pcm.wav");
+
+        app.logger.info("come in test_server");
         service.save_report(value, function (flag) {
-            res.send(flag + "")
+            res.send(flag + "");
         })
 
     } catch (err) {
@@ -80,23 +83,32 @@ router.post('/test_server', function (req, res, next) {
 });
 
 const multer = require('multer');
-
 var upload = multer({dest: 'uploads/'}); // 文件储存路径
 router.post('/uploader', upload.single('avatar'), function (req, res, next) {
     fs.exists(req.file.path, function (exists) {
         if (exists) {
             fs.rename(req.file.path, "uploads/" + req.file.originalname, function (err) {
                 if (err) {
-                    res.send("300")
+                    app.logger.info("file_upload:文件更名出现异常");
+                    res.send("301")
                 } else {
-                    res.send("302")
+                    res.send("300");
+                    app.logger.info("file_upload:文件上传完成");
+                    var filename = path.basename(req.file.path);
+                    var ids = filename.split(".")[0].split("&");
+                    var test_id = ids[0];
+                    var check_id = ids[1];
+                    service.upload_wav_data(req.file.path,function (ret) {
+                        console.log(ret)
+                    })
+
+
                 }
             })
         } else {
-            res.send("301")
+            app.logger.info("file_upload:文件上传失败，文件上传后确不存在");
+            res.send("302")
         }
-
-
     });
 });
 
@@ -119,6 +131,39 @@ router.post('/getCheckVersion', function (req, res, next) {
     res.send(data);
 });
 
+
+function do_conn_data(value) {
+    var current_file = "../uploads/" + value.test_id + "&" + value.check_id + ".pcm.wav";
+    console.log(current_file);
+    fs.exists(current_file, function (exists) {
+        if (exists) {
+            service.upload_json_data(value, function (flag) {
+                app.logger.info("data conn:" + flag)
+            })
+
+            // service.upload_wav_data(current_file,function (up_flag) {
+            //
+            //
+            //     if(up_flag==1){
+            //         service.upload_json_data("",function (flag) {
+            //
+            //
+            //         })
+            //     }else{
+            //         /**
+            //          * 录音文件上传成功才进行json上传
+            //          */
+            //     }
+            // });
+
+        } else {
+            app.logger.info("没有对应文件")
+        }
+
+    });
+
+
+}
 
 function getMd5() {
     Date.prototype.format = function (fmt) {

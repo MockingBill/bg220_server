@@ -1,40 +1,21 @@
-/**
- *Created by fungdong on 2018/3/26
- *
- */
-/*
-module.exports = {
-    mysqlAdd: {
-        host: '127.0.0.1',      // MySQL所在服务器IP
-        user: 'root',           // 用户名
-        password: '',           // 密码
-        database: 'netCell',      // 数据库名称
-        port: 3306,             // 端口号
-        dateStrings: true      // 时间以字符串形式显示，否则会有类似这样的显示：Thu Apr 14 2016 00:00:00 GMT+0800 (中国标准时间) 17:20:12
-    }
-};*/
-
-/*
-var db = function(){};
-
-db.connection = function(){
-    //数据库配置
-    var connection = mysql.createConnection({
-        host:'localhost',
-        user:'root',
-        password:'',
-        database:'netCell',
-        port:3306
-    });
-
-
-    //数据库连接
-    connection.connect(function(err){
-        if(err){
-            console.log(err);
-            return;
-        }
-    });
-    return connection;
+var config={
+    mysql_config:{
+        host: '127.0.0.1',
+        user: 'root',
+        password: '198226198484dq',
+        database: 'bg2020_data',
+        port: 3306
+    },
+    ftp_config: {
+        host: "10.211.55.8",
+        //host:"127.0.0.1",
+        user: 'ftp_user',
+        password: '198226198484dq'
+    },
+    json_upload_url:"http://127.0.0.1:18765/do/",
+    ftp_path:"/dengqian/"
 };
-module.exports = db;*/
+exports.config=config;
+
+
+

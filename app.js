@@ -33,9 +33,7 @@ module.exports.logger = log4js.getLogger('app');
 app.use(log4js.connectLogger(this.logger,
     {level: 'ALL', format: ':remote-addr :method :url :status :response-time ms'}
 ));
-process.on('uncaughtException', function (err) {
-    this.logger.info('global Exception: ' + err);
-});
+
 
 
 

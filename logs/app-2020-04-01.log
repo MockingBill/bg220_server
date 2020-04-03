@@ -1,0 +1,10 @@
+[2020-04-01 11:15:10.288] [INFO] app - ftp client is error
+[2020-04-01 11:15:10.289] [INFO] app - ftp client is close
+[2020-04-01 11:18:26.291] [INFO] app - come in test_server
+[2020-04-01 11:18:27.725] [INFO] app - file_upload:文件上传完成
+[2020-04-01 11:42:05.320] [INFO] app - ftp client is error
+[2020-04-01 11:42:05.322] [INFO] app - ftp client is close
+[2020-04-01 11:42:23.807] [INFO] app - ftp client is error
+[2020-04-01 11:42:23.808] [INFO] app - ftp client is close
+[2020-04-01 11:44:17.921] [INFO] app - ftp client is error
+[2020-04-01 11:44:17.922] [INFO] app - ftp client is close

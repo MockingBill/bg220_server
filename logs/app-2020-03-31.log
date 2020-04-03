@@ -1,0 +1,86 @@
+[2020-03-31 16:16:08.612] [INFO] app - ftp client is error
+[2020-03-31 16:16:08.621] [INFO] app - ftp client is close
+[2020-03-31 16:16:38.024] [INFO] app - ftp client is error
+[2020-03-31 16:16:38.025] [INFO] app - ftp client is close
+[2020-03-31 16:22:42.341] [INFO] app - ftp client is error
+[2020-03-31 16:22:42.342] [INFO] app - ftp client is close
+[2020-03-31 16:25:34.301] [INFO] app - ftp client is error
+[2020-03-31 16:25:34.303] [INFO] app - ftp client is close
+[2020-03-31 16:25:52.445] [INFO] app - come in test_server
+[2020-03-31 16:27:15.044] [INFO] app - come in test_server
+[2020-03-31 16:29:02.805] [INFO] app - ftp client is error
+[2020-03-31 16:29:02.808] [INFO] app - ftp client is close
+[2020-03-31 16:29:07.007] [INFO] app - come in test_server
+[2020-03-31 16:29:41.207] [INFO] app - come in test_server
+[2020-03-31 16:29:51.892] [INFO] app - ftp client is error
+[2020-03-31 16:29:51.895] [INFO] app - ftp client is close
+[2020-03-31 16:30:33.247] [INFO] app - ftp client is error
+[2020-03-31 16:30:33.248] [INFO] app - ftp client is close
+[2020-03-31 16:30:35.723] [INFO] app - come in test_server
+[2020-03-31 16:31:16.730] [INFO] app - ftp client is error
+[2020-03-31 16:31:16.736] [INFO] app - ftp client is close
+[2020-03-31 16:31:26.598] [INFO] app - come in test_server
+[2020-03-31 16:32:14.558] [INFO] app - ftp client is error
+[2020-03-31 16:32:14.560] [INFO] app - ftp client is close
+[2020-03-31 16:32:21.797] [INFO] app - come in test_server
+[2020-03-31 16:32:21.917] [INFO] app - data conn:1
+[2020-03-31 16:39:29.995] [INFO] app - ftp client is error
+[2020-03-31 16:39:30.001] [INFO] app - ftp client is close
+[2020-03-31 16:39:39.204] [INFO] app - come in test_server
+[2020-03-31 16:39:39.978] [INFO] app - come in test_server
+[2020-03-31 16:39:42.244] [INFO] app - 没有对应文件
+[2020-03-31 16:40:11.842] [INFO] app - ftp client is error
+[2020-03-31 16:40:11.843] [INFO] app - ftp client is close
+[2020-03-31 16:40:28.953] [INFO] app - come in test_server
+[2020-03-31 16:40:58.987] [INFO] app - 没有对应文件
+[2020-03-31 16:44:22.808] [INFO] app - come in test_server
+[2020-03-31 16:44:52.837] [INFO] app - 没有对应文件
+[2020-03-31 16:45:12.984] [INFO] app - ftp client is error
+[2020-03-31 16:45:12.996] [INFO] app - ftp client is close
+[2020-03-31 16:45:16.973] [INFO] app - come in test_server
+[2020-03-31 16:45:47.008] [INFO] app - 没有对应文件
+[2020-03-31 16:47:46.035] [INFO] app - come in test_server
+[2020-03-31 17:01:28.828] [INFO] app - ftp client is error
+[2020-03-31 17:01:28.830] [INFO] app - ftp client is close
+[2020-03-31 17:05:06.668] [INFO] app - ftp client is error
+[2020-03-31 17:05:06.677] [INFO] app - ftp client is close
+[2020-03-31 17:07:30.802] [INFO] app - ftp client is error
+[2020-03-31 17:07:30.804] [INFO] app - ftp client is close
+[2020-03-31 17:07:33.980] [INFO] app - come in test_server
+[2020-03-31 17:07:35.349] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:12:35.739] [INFO] app - come in test_server
+[2020-03-31 17:12:38.994] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:25:54.933] [INFO] app - ftp client is error
+[2020-03-31 17:25:54.934] [INFO] app - ftp client is close
+[2020-03-31 17:26:04.990] [INFO] app - come in test_server
+[2020-03-31 17:26:08.047] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:26:25.542] [INFO] app - ftp client is error
+[2020-03-31 17:26:25.543] [INFO] app - ftp client is close
+[2020-03-31 17:26:34.464] [INFO] app - come in test_server
+[2020-03-31 17:26:37.599] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:29:08.294] [INFO] app - ftp client is error
+[2020-03-31 17:29:08.295] [INFO] app - ftp client is close
+[2020-03-31 17:29:17.194] [INFO] app - come in test_server
+[2020-03-31 17:30:48.418] [INFO] app - ftp client is error
+[2020-03-31 17:30:48.423] [INFO] app - ftp client is close
+[2020-03-31 17:31:01.207] [INFO] app - come in test_server
+[2020-03-31 17:31:04.495] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:31:51.476] [INFO] app - ftp client is error
+[2020-03-31 17:31:51.477] [INFO] app - ftp client is close
+[2020-03-31 17:31:59.796] [INFO] app - come in test_server
+[2020-03-31 17:32:11.007] [INFO] app - come in test_server
+[2020-03-31 17:32:14.043] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:32:40.841] [INFO] app - ftp client is error
+[2020-03-31 17:32:40.845] [INFO] app - ftp client is close
+[2020-03-31 17:32:49.368] [INFO] app - come in test_server
+[2020-03-31 17:32:52.481] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:33:49.890] [INFO] app - ftp client is error
+[2020-03-31 17:33:49.891] [INFO] app - ftp client is close
+[2020-03-31 17:34:00.293] [INFO] app - ftp client is error
+[2020-03-31 17:34:00.298] [INFO] app - ftp client is close
+[2020-03-31 17:34:10.018] [INFO] app - come in test_server
+[2020-03-31 17:34:13.860] [INFO] app - file_upload:文件上传完成
+[2020-03-31 17:34:47.266] [INFO] app - ftp client is error
+[2020-03-31 17:34:47.272] [INFO] app - ftp client is close
+[2020-03-31 17:34:50.543] [INFO] app - come in test_server
+[2020-03-31 17:34:54.009] [INFO] app - file_upload:文件上传完成
