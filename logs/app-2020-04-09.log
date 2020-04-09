@@ -1,0 +1,18 @@
+[2020-04-09 13:50:04.046] [INFO] app - come in test_server
+[2020-04-09 13:50:04.682] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&5d424899-aef4-4902-8979-d5ea09f82519.pcm.wav:file_upload:本部文件上传完成
+[2020-04-09 13:58:35.854] [INFO] app - come in test_server
+[2020-04-09 13:58:36.258] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&5d424899-aef4-4902-8979-d5ea09f82519.pcm.wav:file_upload:本部文件上传完成
+[2020-04-09 14:04:10.259] [INFO] app - come in test_server
+[2020-04-09 14:04:10.636] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&5d424899-aef4-4902-8979-d5ea09f82519.pcm.wav:file_upload:文件更名出现异常
+[2020-04-09 14:04:48.483] [INFO] app - come in test_server
+[2020-04-09 14:04:48.764] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&5d424899-aef4-4902-8979-d5ea09f82519.pcm.wav:file_upload:文件更名出现异常
+[2020-04-09 14:05:49.058] [INFO] app - come in test_server
+[2020-04-09 14:05:49.487] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&5d424899-aef4-4902-8979-d5ea09f82519.pcm.wav:file_upload:文件更名出现异常
+[2020-04-09 14:07:35.353] [INFO] app - come in test_server
+[2020-04-09 14:07:35.566] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&5d424899-aef4-4902-8979-d5ea09f82519.pcm.wav:file_upload:本部文件上传完成
+[2020-04-09 17:28:03.088] [INFO] app - come in test_server
+[2020-04-09 17:28:03.477] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&5d424899-aef4-4902-8979-d5ea09f82519.pcm.wav:file_upload:本部文件上传完成
+[2020-04-09 17:28:03.882] [INFO] app - 透传接口返回结果: {"result":"0","msg":"没有查询到拨测任务","errorcode":"001"}
+[2020-04-09 17:28:03.883] [INFO] app - json数据透传失败：
+[2020-04-09 17:28:03.883] [INFO] app - {"result":"0","msg":"没有查询到拨测任务","errorcode":"001"}
+[2020-04-09 17:28:03.890] [INFO] app - write_upload_failure_list_保存透传失败数据失败

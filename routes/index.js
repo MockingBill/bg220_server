@@ -82,25 +82,58 @@ router.post('/test_server', function (req, res, next) {
     }
 });
 
+
+var ftp_service = require("../services/ftp_service");
+var config = require('../ConnConfig').config;
 const multer = require('multer');
 var upload = multer({dest: 'uploads/'}); // 文件储存路径
 router.post('/uploader', upload.single('avatar'), function (req, res, next) {
+    var filename = req.file.originalname;
+    console.log(req.file.path);
     fs.exists(req.file.path, function (exists) {
         if (exists) {
-            fs.rename(req.file.path, "uploads/" + req.file.originalname, function (err) {
+            fs.rename(req.file.path, "uploads/" + filename, function (err) {
                 if (err) {
-                    app.logger.info("file_upload:文件更名出现异常");
+                    app.logger.info(req.file.originalname + ":file_upload:文件更名出现异常");
                     res.send("301")
                 } else {
                     res.send("300");
-                    app.logger.info("file_upload:文件上传完成");
-                    var filename = path.basename(req.file.path);
+                    app.logger.info(req.file.originalname + ":file_upload:本部文件上传完成");
+
                     var ids = filename.split(".")[0].split("&");
                     var test_id = ids[0];
                     var check_id = ids[1];
-                    service.upload_wav_data(req.file.path,function (ret) {
-                        console.log(ret)
-                    })
+                    var localfile_url="uploads/" + filename;
+                    if (fs.existsSync(localfile_url)) {
+                        service.upload_wav_data(localfile_url,function (ret) {
+                            if(ret){
+                                service.upload_json_data(test_id, check_id, function (err,res) {
+                                    if (err) {
+                                        service.write_upload_failure_list(test_id, check_id, 'json');
+                                    } else {
+                                        if(res.result!="1"){
+                                            service.write_upload_failure_list(test_id, check_id, 'json');
+                                            app.logger.info("json数据透传失败：")
+                                            app.logger.info(res)
+                                        }else{
+                                            app.logger.info("json数据透传成功：")
+                                            app.logger.info(res)
+                                        }
+                                    }
+                                });
+
+
+                            }else{
+                                service.write_upload_failure_list(test_id,check_id,'wav');
+                            }
+                        })
+
+
+                    } else {
+                        console.log("录音文件不存在："+localfile_url)
+                        service.write_upload_failure_list(test_id,check_id,'wav');
+                    }
+
 
 
                 }

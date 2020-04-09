@@ -3,6 +3,7 @@ let app = require('../app');
 let fs = require("fs");
 let Client = require('ftp');
 let path = require('path');
+var sftp_Client = require('ssh2-sftp-client');
 
 function is_exsit_date_dir(dir_name, cb) {
     var c = new Client();
@@ -88,9 +89,30 @@ exports.about_dir = function (dir_name) {
             }
         }
     });
-}
+};
 
 
+
+
+exports.s_put=function (localPath,romotePath,cb){
+    let sftp = new sftp_Client();
+    sftp.connect({
+        host: '121.28.209.22',
+        port: '60022',
+        username: 'ftptest1',
+        password: 'ftptest1'
+    }).then(() => {
+        console.log("已连接:"+config.ftp_config.host);
+        sftp.put(localPath,romotePath);
+    }).then(() =>{
+        console.log(localPath + "上传完成");
+        sftp.end();
+        cb(true)
+    }).catch((err) => {
+        console.log(err);
+        cb(false)
+    });
+};
 
 
 

@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- * docker run -it --name="net_coll" --link="mysql-db:mysqlIP" -p 4000:4000 -v /etc/localtime:/etc/localtime  net_coll_data
- */
+
 
 var app = require('../app');
 var debug = require('debug')('netcell:server');

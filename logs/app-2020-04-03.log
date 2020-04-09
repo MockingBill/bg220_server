@@ -1,0 +1,58 @@
+[2020-04-03 10:06:11.638] [INFO] app - come in test_server
+[2020-04-03 10:06:12.031] [INFO] app - file_upload:文件上传完成
+[2020-04-03 10:06:12.438] [INFO] app - 22e41752be305a520924f78875339a80ftp上传失败：Error: Filename invalid
+[2020-04-03 10:08:42.037] [INFO] app - come in test_server
+[2020-04-03 10:08:42.192] [INFO] app - file_upload:文件上传完成
+[2020-04-03 10:08:42.423] [INFO] app - 4308f3591e9e9b969a2acc3aab0a2fc7ftp上传成功
+[2020-04-03 10:11:33.951] [INFO] app - come in test_server
+[2020-04-03 10:11:34.078] [INFO] app - file_upload:文件上传完成
+[2020-04-03 10:11:34.609] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wavftp上传成功
+[2020-04-03 10:31:18.839] [INFO] app - come in test_server
+[2020-04-03 10:31:54.940] [INFO] app - come in test_server
+[2020-04-03 10:31:55.275] [INFO] app - file_upload:文件上传完成
+[2020-04-03 10:31:55.566] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:31:55.569] [INFO] app - write_upload_failure_list_透传失败数据已经保存
+[2020-04-03 10:32:43.270] [INFO] app - come in test_server
+[2020-04-03 10:32:43.473] [INFO] app - file_upload:文件上传完成
+[2020-04-03 10:32:43.607] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:32:43.610] [INFO] app - write_upload_failure_list_透传失败数据已经保存
+[2020-04-03 10:40:32.139] [INFO] app - come in test_server
+[2020-04-03 10:40:32.399] [INFO] app - file_upload:文件上传完成
+[2020-04-03 10:40:32.495] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:50:10.595] [INFO] app - come in test_server
+[2020-04-03 10:50:10.909] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav:file_upload:文件上传完成
+[2020-04-03 10:50:11.059] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:50:59.197] [INFO] app - come in test_server
+[2020-04-03 10:50:59.538] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav:file_upload:文件上传完成
+[2020-04-03 10:50:59.698] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:52:21.092] [INFO] app - come in test_server
+[2020-04-03 10:52:21.370] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav:file_upload:文件上传完成
+[2020-04-03 10:52:21.725] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:53:33.411] [INFO] app - come in test_server
+[2020-04-03 10:53:47.535] [INFO] app - come in test_server
+[2020-04-03 10:53:47.686] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav:file_upload:文件上传完成
+[2020-04-03 10:53:47.847] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:54:11.439] [INFO] app - come in test_server
+[2020-04-03 10:54:11.654] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav:file_upload:文件上传完成
+[2020-04-03 10:54:11.796] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 10:54:27.591] [INFO] app - come in test_server
+[2020-04-03 10:54:27.779] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav:file_upload:文件上传完成
+[2020-04-03 10:54:27.905] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&8841abb9-c078-4b33-a176-1cdae530b6e4.pcm.wav :ftp上传成功
+[2020-04-03 16:11:51.332] [INFO] app - come in test_server
+[2020-04-03 16:11:51.350] [INFO] app - save_test_dataError: connect ECONNREFUSED 127.0.0.1:3306
+[2020-04-03 16:12:57.907] [INFO] app - come in test_server
+[2020-04-03 16:12:58.862] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&c9c0ab9f-7872-4fbb-ae46-1cb62783d72c.pcm.wav:file_upload:文件上传完成
+[2020-04-03 16:16:08.062] [INFO] app - come in test_server
+[2020-04-03 16:16:08.591] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&c9c0ab9f-7872-4fbb-ae46-1cb62783d72c.pcm.wav:file_upload:文件上传完成
+[2020-04-03 16:16:08.795] [INFO] app - data con_Error: certificate has expired
+[2020-04-03 16:16:08.796] [INFO] app - upload_json_data_数据上传失败Error: certificate has expired
+[2020-04-03 16:16:49.269] [INFO] app - come in test_server
+[2020-04-03 16:17:11.098] [INFO] app - come in test_server
+[2020-04-03 16:17:11.594] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&c9c0ab9f-7872-4fbb-ae46-1cb62783d72c.pcm.wav:file_upload:文件上传完成
+[2020-04-03 16:17:11.758] [INFO] app - upload_json_data_数据上传失败Error: certificate has expired
+[2020-04-03 16:22:44.905] [INFO] app - come in test_server
+[2020-04-03 16:22:46.104] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&c9c0ab9f-7872-4fbb-ae46-1cb62783d72c.pcm.wav:file_upload:文件上传完成
+[2020-04-03 16:23:44.628] [INFO] app - come in test_server
+[2020-04-03 16:23:45.425] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&c9c0ab9f-7872-4fbb-ae46-1cb62783d72c.pcm.wav:file_upload:文件上传完成
+[2020-04-03 16:26:43.448] [INFO] app - come in test_server
+[2020-04-03 16:26:43.988] [INFO] app - e15eb6e7_e797_4ae7_9551_7bf339ac3145&c9c0ab9f-7872-4fbb-ae46-1cb62783d72c.pcm.wav:file_upload:文件上传完成
