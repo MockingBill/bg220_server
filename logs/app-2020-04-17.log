@@ -1,0 +1,54 @@
+[2020-04-17 11:16:37.270] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:16:40.239] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:16:53.477] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:14.116] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:14.122] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:14.128] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:14.135] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:14.140] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:14.146] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:32.066] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:32.072] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:41.939] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:17:41.945] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:18:28.090] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:18:32.638] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:18:45.035] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:19:10.219] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:19:10.225] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:19:35.060] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:19:52.841] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:20:16.284] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:20:54.703] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:21:23.948] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:22:57.795] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:23:48.829] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:25:06.967] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:25:25.412] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 11:26:20.612] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-17 16:57:53.260] [INFO] app - come in test_server
+[2020-04-17 16:58:13.636] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&d962daa6-87da-450f-8b6d-c085e44bc78a.pcm.wav:file_upload:本部文件上传完成
+[2020-04-17 16:58:13.672] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&d962daa6-87da-450f-8b6d-c085e44bc78a.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-17 16:58:13.677] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-17 16:59:55.384] [INFO] app - come in test_server
+[2020-04-17 17:03:55.205] [INFO] app - come in test_server
+[2020-04-17 17:04:15.483] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&717e0b0c-170b-402e-8a6b-a712c7b4705f.pcm.wav:file_upload:本部文件上传完成
+[2020-04-17 17:04:15.545] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&717e0b0c-170b-402e-8a6b-a712c7b4705f.pcm.wav :ftp上传成功
+[2020-04-17 17:04:16.154] [INFO] app - 透传接口返回结果: {"result":"0","errorcode":"003","msg":"附件获取失败"}
+[2020-04-17 17:04:16.156] [INFO] app - json数据透传失败：
+[2020-04-17 17:04:16.156] [INFO] app - {"result":"0","errorcode":"003","msg":"附件获取失败"}
+[2020-04-17 17:04:36.183] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-17 17:17:51.960] [INFO] app - come in test_server
+[2020-04-17 17:18:12.400] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&0f5db1ed-4ef2-4d27-b89e-0e98298b0e65.pcm.wav:file_upload:本部文件上传完成
+[2020-04-17 17:18:12.463] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&0f5db1ed-4ef2-4d27-b89e-0e98298b0e65.pcm.wav :ftp上传成功
+[2020-04-17 17:18:13.034] [INFO] app - 透传接口返回结果: {"result":"1","errorcode":"","msg":""}
+[2020-04-17 17:18:13.035] [INFO] app - json数据透传失败：
+[2020-04-17 17:18:13.036] [INFO] app - {"result":"1","errorcode":"","msg":""}
+[2020-04-17 17:18:33.062] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-17 17:21:09.573] [INFO] app - come in test_server
+[2020-04-17 17:21:29.870] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&5c1b60a3-a8b8-46b4-95cf-46ede28f69fe.pcm.wav:file_upload:本部文件上传完成
+[2020-04-17 17:21:29.930] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&5c1b60a3-a8b8-46b4-95cf-46ede28f69fe.pcm.wav :ftp上传成功
+[2020-04-17 17:21:30.311] [INFO] app - 透传接口返回结果: {"result":"1","errorcode":"","msg":""}
+[2020-04-17 17:21:30.312] [INFO] app - json数据透传失败：
+[2020-04-17 17:21:30.313] [INFO] app - {"result":"1","errorcode":"","msg":""}
+[2020-04-17 17:21:50.337] [INFO] app - write_upload_failure_list_保存透传失败数据失败

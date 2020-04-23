@@ -40,12 +40,7 @@ exports.save_report = function (value, cb) {
     var test_data = [value.test_id, value.verify_bsss_value, value.verify_datetime_value, value.verify_ECI_value, value.verify_gps_value, value.verify_network_type_value, value.verify_TAC_value, value.verify_url_value, value.verify_system_mark];
 
     var check_data = [value.check_id, value.network_operator_name, value.address, value.eci, value.tac, value.bsss, value.gps, value.network_type, value.phone_type, value.coll_time, value.download_speed, value.upload_speed, value.bsss_check, value.datetime_check, value.ECI_check, value.gps_check, value.network_type_check, value.phonenumber, value.TAC_check, value.url_check,
-
-        // path.join("/dir_" + date.format(new Date(), 'YYYYMMDD'),value.test_id + "&" + value.check_id + ".pcm.wav"),
-        path.join(config.ftp_path,value.test_id + "&" + value.check_id + ".pcm.wav"),
-
-
-        value.username];
+        path.join(config.ftp_path,"/dir_" + date.format(new Date(), 'YYYYMMDD'),value.test_id + "&" + value.check_id + ".pcm.wav"),value.username];
 
     /**
      * 该报告已上传成功，请勿重复上传 2
@@ -206,22 +201,39 @@ exports.save_report = function (value, cb) {
     });
 };
 
-exports.upload_wav_data = function (url, cb) {
 
-    dir_name = "/dir_" + date.format(new Date(), 'YYYYMMDD');
+
+
+
+exports.upload_wav_data = function (url, cb) {
+    dir_name =path.join( config.ftp_path,"/dir_" + date.format(new Date(), 'YYYYMMDD'));
     local_file = url;
-    remote_file = path.join(dir_name, path.basename(local_file));
-    ftp_service.about_dir(dir_name);
-    ftp_service.do_put(local_file, remote_file, function (err) {
-        if (err) {
-            app.logger.info(path.basename(url)+" :ftp上传失败：" + err);
+    remote_file =path.join(dir_name, path.basename(local_file));
+
+    ftp_service.about_dir(dir_name,function (flag) {
+        if(flag){
+            app.logger.info("localfile:"+local_file);
+            app.logger.info("remote_file:"+remote_file);
+
+            ftp_service.do_put(local_file, remote_file, function (err) {
+                if (err) {
+                    app.logger.info(path.basename(url)+" :ftp上传失败：" + err);
+                    cb(false);
+                } else {
+                    app.logger.info(path.basename(url)+" :ftp上传成功");
+                    cb(true);
+                }
+            });
+        }else{
+            app.logger.info(path.basename(url)+" :目录检测失败");
             cb(false);
-        } else {
-            app.logger.info(path.basename(url)+" :ftp上传成功");
-            cb(true);
         }
+        
     });
 };
+
+
+
 
 exports.write_upload_failure_list=function (test_id,check_id,loss_item) {
     sql="insert into failure_list values (?,?,?)";
@@ -234,6 +246,8 @@ exports.write_upload_failure_list=function (test_id,check_id,loss_item) {
             con.query(sql,[test_id,check_id,loss_item],function (err,row) {
                 if(err){
                     app.logger.info("write_upload_failure_list_保存透传失败数据失败")
+                    app.logger.info(err);
+
                 }else{
                     app.logger.info("write_upload_failure_list_透传失败数据已经保存")
                 }
@@ -250,12 +264,12 @@ exports.upload_json_data = function (test_id,check_id, cb) {
         mysqlPoll.getConnection(function (err,con) {
             if(err){
                 app.logger.info("upload_json_data_获取连接失败"+err);
-                cb(true,null)
+                cb(true)
             }else{
                 con.query(sql,[check_id],function (err,row) {
                     if(err){
                         app.logger.info("upload_json_data_数据查询失败"+err);
-                        cb(true,null)
+                        cb(true)
                     }
                     else{
                         if(row!=undefined && row.length>0){
@@ -302,13 +316,21 @@ exports.upload_json_data = function (test_id,check_id, cb) {
                                         _data += chunk;
                                     });
                                     res.on('end', function(){
-                                        app.logger.info("透传接口返回结果:",_data);
-                                        cb(false,_data);
+                                        _data=JSON.parse(_data);
+                                        app.logger.info("类型:",typeof _data);
+                                        if (_data.result&&_data.result=="1"){
+                                            app.logger.info("数据透传成功:",_data);
+                                            cb(false);
+                                        }else{
+                                            app.logger.info("数据透传失败:",_data);
+                                            cb(true);
+                                        }
+
                                     });
 
                                 }else{
                                     app.logger.info("透传接口返回响应码:",res.statusCode);
-                                    cb(true,null);
+                                    cb(true);
                                 }
 
                             });
@@ -317,7 +339,7 @@ exports.upload_json_data = function (test_id,check_id, cb) {
 
                         }else{
                             app.logger.info("upload_json_data_查询结果为空"+err);
-                            cb(true,null)
+                            cb(true)
                         }
                     }
 
@@ -336,6 +358,11 @@ exports.upload_json_data = function (test_id,check_id, cb) {
 
 
 };
+
+
+
+
+
 
 
 

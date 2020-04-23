@@ -4,12 +4,17 @@ let fs = require("fs");
 let Client = require('ftp');
 let path = require('path');
 var sftp_Client = require('ssh2-sftp-client');
+var date = require("silly-datetime");
 
 function is_exsit_date_dir(dir_name, cb) {
     var c = new Client();
     c.connect(config.ftp_config);
+    c.on('error',function (err) {
+        app.logger.info("ftp出现错误:"+err);
+        cb(true,false)
+    });
     c.on('ready', function () {
-        c.list(function (err, list) {
+        c.list(config.ftp_path,function (err, list) {
             if (err) {
                 c.end();
                 console.log(err);
@@ -17,7 +22,7 @@ function is_exsit_date_dir(dir_name, cb) {
             } else {
                 flag = false;
                 for (var i in list) {
-                    if (list[i].name == dir_name && list[i].type == 'd') {
+                    if (list[i].name == ("dir_" + date.format(new Date(), 'YYYYMMDD')) && list[i].type == 'd') {
                         flag = true;
                     }
                 }
@@ -29,14 +34,27 @@ function is_exsit_date_dir(dir_name, cb) {
         });
     });
 }
+
+
+
+
+
+
+
+
+
 function create_dir(dir_path, cb) {
     var c = new Client();
     c.connect(config.ftp_config);
+    c.on('error',function (err) {
+        app.logger.info("ftp出现错误:"+err);
+        cb(true,false)
+    });
     c.on('ready', function () {
         c.mkdir(dir_path, true, function (err) {
             if (err) {
                 c.end();
-                console.log(err);
+                app.logger.info(err);
                 cb(true, false);
             } else {
                 c.end();
@@ -50,11 +68,15 @@ function create_dir(dir_path, cb) {
 exports.do_put = function (local_file, remote_file, cb) {
     var c = new Client();
     c.connect(config.ftp_config);
+    c.on('error',function (err) {
+        app.logger.info("ftp出现错误:"+err);
+        cb(err)
+    });
     c.on('ready', function () {
         c.put(local_file, remote_file, function (err) {
             if (err) {
                 c.end();
-                console.log(err);
+                app.logger.info(err);
                 cb(err);
             } else {
                 c.end();
@@ -66,22 +88,29 @@ exports.do_put = function (local_file, remote_file, cb) {
 }
 
 
-exports.about_dir = function (dir_name) {
+
+
+exports.about_dir = function (dir_name,cb) {
     is_exsit_date_dir(dir_name, function (err, flag) {
         if (err) {
-            console.log(dir_name + ":判断目录是否存在异常")
+            app.logger.info(dir_name + ":判断目录存在异常");
+            cb(false);
         } else {
             if (flag) {
-                console.log(dir_name + ":目录已存在");
+                app.logger.info(dir_name + ":目录已存在");
+                cb(true);
             } else {
                 create_dir(dir_name, function (err, flag) {
                     if (err) {
-                        console.log(dir_name + ":由于创建目录异常，目录未创建");
+                        app.logger.info(dir_name + ":由于创建目录异常，目录未创建");
+                        cb(false);
                     } else {
                         if (flag) {
-                            console.log(dir_name + ":目录不存在，但创建成功");
+                            app.logger.info(dir_name + ":目录不存在，但创建成功");
+                            cb(true);
                         } else {
-                            console.log(dir_name + ":目录不存在，创建失败");
+                            app.logger.info(dir_name + ":目录不存在，创建失败");
+                            cb(false);
                         }
                     }
 
@@ -90,30 +119,6 @@ exports.about_dir = function (dir_name) {
         }
     });
 };
-
-
-
-
-exports.s_put=function (localPath,romotePath,cb){
-    let sftp = new sftp_Client();
-    sftp.connect({
-        host: '121.28.209.22',
-        port: '60022',
-        username: 'ftptest1',
-        password: 'ftptest1'
-    }).then(() => {
-        console.log("已连接:"+config.ftp_config.host);
-        sftp.put(localPath,romotePath);
-    }).then(() =>{
-        console.log(localPath + "上传完成");
-        sftp.end();
-        cb(true)
-    }).catch((err) => {
-        console.log(err);
-        cb(false)
-    });
-};
-
 
 
 

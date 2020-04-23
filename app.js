@@ -78,6 +78,12 @@ app.use(function(err, req, res, next) {
 });
 
 
+process.on('uncaughtException', function (err) {
+    //打印出错误
+    log4js.getLogger('app').info(err);
+    log4js.getLogger('app').info(err.stack);
+
+});
 
 
 module.exports = app;

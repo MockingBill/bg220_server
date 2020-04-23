@@ -1,0 +1,52 @@
+[2020-04-20 10:15:03.069] [INFO] app - come in test_server
+[2020-04-20 10:15:23.496] [INFO] app - 3d126d9e_29dc_4b42_bb17_7cf664c4c1d0&7c3cae6b-fad0-4f32-984c-ec0103a28f05.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 10:15:23.613] [INFO] app - 3d126d9e_29dc_4b42_bb17_7cf664c4c1d0&7c3cae6b-fad0-4f32-984c-ec0103a28f05.pcm.wav :ftp�ϴ�ʧ�ܣ�Error: Could not create file.
+[2020-04-20 10:15:23.617] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 10:30:54.137] [INFO] app - come in test_server
+[2020-04-20 10:31:16.163] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&4d248cac-2e0e-49f7-a96e-7a1fcaecc763.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 10:31:16.280] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&4d248cac-2e0e-49f7-a96e-7a1fcaecc763.pcm.wav :ftp�ϴ�ʧ�ܣ�Error: Could not create file.
+[2020-04-20 10:31:16.284] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 11:05:27.794] [INFO] app - come in test_server
+[2020-04-20 11:05:51.777] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&f6eb9e27-f4bc-4ba5-8e99-f619da56169b.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 11:05:51.880] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&f6eb9e27-f4bc-4ba5-8e99-f619da56169b.pcm.wav :ftp�ϴ�ʧ�ܣ�Error: Could not create file.
+[2020-04-20 11:05:51.882] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 11:18:28.230] [INFO] app - come in test_server
+[2020-04-20 11:18:50.938] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&5d3d4fab-9ef8-4544-a6d1-fd1447affeaf.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 11:18:51.053] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&5d3d4fab-9ef8-4544-a6d1-fd1447affeaf.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-20 11:18:51.057] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 11:25:52.299] [INFO] app - come in test_server
+[2020-04-20 11:26:13.642] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&4217c43c-cd95-4e91-baca-f11a34244f80.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 11:31:22.158] [INFO] app - come in test_server
+[2020-04-20 11:31:44.880] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&72f58a61-7dcf-437d-9bba-8bbd8eb6acc1.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 11:31:44.957] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&72f58a61-7dcf-437d-9bba-8bbd8eb6acc1.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-20 11:31:44.962] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 11:41:53.056] [INFO] app - come in test_server
+[2020-04-20 11:42:14.144] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&97b5c2a5-893d-4c4b-ad75-760fdb7126ca.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 11:42:14.187] [INFO] app - localfile:uploads/9d25f03b-fd29-419b-a029-37d1f25fa742&97b5c2a5-893d-4c4b-ad75-760fdb7126ca.pcm.wav
+[2020-04-20 11:42:14.187] [INFO] app - remote_file:/home/yingyong/files/boce/ftpfile/home/yingyong/files/boce/ftpfile/dir_20200420/9d25f03b-fd29-419b-a029-37d1f25fa742&97b5c2a5-893d-4c4b-ad75-760fdb7126ca.pcm.wav
+[2020-04-20 11:42:14.222] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&97b5c2a5-893d-4c4b-ad75-760fdb7126ca.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-20 11:42:14.226] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 11:45:12.070] [INFO] app - come in test_server
+[2020-04-20 11:45:34.048] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&02617a83-a03f-4984-b25f-413011bbf053.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 11:45:34.094] [INFO] app - localfile:uploads/9d25f03b-fd29-419b-a029-37d1f25fa742&02617a83-a03f-4984-b25f-413011bbf053.pcm.wav
+[2020-04-20 11:45:34.094] [INFO] app - remote_file:/home/yingyong/files/boce/ftpfile/dir_20200420/9d25f03b-fd29-419b-a029-37d1f25fa742&02617a83-a03f-4984-b25f-413011bbf053.pcm.wav
+[2020-04-20 11:45:34.135] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&02617a83-a03f-4984-b25f-413011bbf053.pcm.wav :ftp上传成功
+[2020-04-20 11:45:34.643] [INFO] app - 透传接口返回结果: {"result":"1","errorcode":"","msg":""}
+[2020-04-20 11:45:34.645] [INFO] app - json数据透传失败：
+[2020-04-20 11:45:34.645] [INFO] app - {"result":"1","errorcode":"","msg":""}
+[2020-04-20 11:45:54.672] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 12:05:20.340] [INFO] app - come in test_server
+[2020-04-20 12:05:42.432] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&75008e39-574b-4275-9fdc-adbb94807f7a.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 12:05:42.475] [INFO] app - localfile:uploads/9d25f03b-fd29-419b-a029-37d1f25fa742&75008e39-574b-4275-9fdc-adbb94807f7a.pcm.wav
+[2020-04-20 12:05:42.475] [INFO] app - remote_file:/home/yingyong/files/boce/ftpfile/dir_20200420/9d25f03b-fd29-419b-a029-37d1f25fa742&75008e39-574b-4275-9fdc-adbb94807f7a.pcm.wav
+[2020-04-20 12:05:42.521] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&75008e39-574b-4275-9fdc-adbb94807f7a.pcm.wav :ftp上传成功
+[2020-04-20 12:05:42.958] [INFO] app - 数据透传失败: {"result":"1","errorcode":"","msg":""}
+[2020-04-20 12:06:02.987] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-20 12:46:20.250] [INFO] app - come in test_server
+[2020-04-20 12:46:42.282] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&14b47f28-6208-41a2-b06d-7b0f29f30425.pcm.wav:file_upload:本部文件上传完成
+[2020-04-20 12:46:42.326] [INFO] app - localfile:uploads/9d25f03b-fd29-419b-a029-37d1f25fa742&14b47f28-6208-41a2-b06d-7b0f29f30425.pcm.wav
+[2020-04-20 12:46:42.326] [INFO] app - remote_file:/home/yingyong/files/boce/ftpfile/dir_20200420/9d25f03b-fd29-419b-a029-37d1f25fa742&14b47f28-6208-41a2-b06d-7b0f29f30425.pcm.wav
+[2020-04-20 12:46:42.368] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&14b47f28-6208-41a2-b06d-7b0f29f30425.pcm.wav :ftp上传成功
+[2020-04-20 12:46:42.822] [INFO] app - 类型: object
+[2020-04-20 12:46:42.822] [INFO] app - 数据透传成功: { result: '1', errorcode: '', msg: '' }
+[2020-04-20 12:46:42.826] [INFO] app - json数据透传成功：

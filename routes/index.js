@@ -5,14 +5,10 @@ var app = require('../app');
 var crypto = require('crypto');
 var fs = require("fs");
 var path = require("path");
-
-
 var router = express.Router();
-
 var KEY = "bXlEZWFyTFdX132df6bVGhlV2FudGVy";
 var vi = new Buffer("1234567812345678");
 var SALT = "QWER!@#$ASDF";
-
 /**
  * 请求解密及token认证
  */
@@ -99,7 +95,6 @@ router.post('/uploader', upload.single('avatar'), function (req, res, next) {
                 } else {
                     res.send("300");
                     app.logger.info(req.file.originalname + ":file_upload:本部文件上传完成");
-
                     var ids = filename.split(".")[0].split("&");
                     var test_id = ids[0];
                     var check_id = ids[1];
@@ -107,31 +102,25 @@ router.post('/uploader', upload.single('avatar'), function (req, res, next) {
                     if (fs.existsSync(localfile_url)) {
                         service.upload_wav_data(localfile_url,function (ret) {
                             if(ret){
-                                service.upload_json_data(test_id, check_id, function (err,res) {
+                                service.upload_json_data(test_id, check_id, function (err) {
                                     if (err) {
                                         service.write_upload_failure_list(test_id, check_id, 'json');
                                     } else {
-                                        if(res.result!="1"){
-                                            service.write_upload_failure_list(test_id, check_id, 'json');
-                                            app.logger.info("json数据透传失败：")
-                                            app.logger.info(res)
-                                        }else{
-                                            app.logger.info("json数据透传成功：")
-                                            app.logger.info(res)
-                                        }
+                                            app.logger.info("json数据透传成功：");
                                     }
                                 });
-
-
                             }else{
                                 service.write_upload_failure_list(test_id,check_id,'wav');
+                                service.write_upload_failure_list(test_id, check_id, 'json');
+
                             }
                         })
 
 
                     } else {
-                        console.log("录音文件不存在："+localfile_url)
+                        console.log("录音文件不存在："+localfile_url);
                         service.write_upload_failure_list(test_id,check_id,'wav');
+                        service.write_upload_failure_list(test_id, check_id, 'json');
                     }
 
 
@@ -232,6 +221,8 @@ function getMd5() {
 
 
 module.exports = router;
+
+
 
 
 

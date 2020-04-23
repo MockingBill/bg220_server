@@ -1,0 +1,29 @@
+[2020-04-22 14:27:15.224] [INFO] app - come in test_server
+[2020-04-22 14:27:15.838] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&6f6c0429-e8e2-4659-8ec6-16fa6869934d.pcm.wav:file_upload:本部文件上传完成
+[2020-04-22 14:27:25.850] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-22 14:27:25.855] [INFO] app - Error: Timeout while connecting to server
+    at Timeout._onTimeout (/Users/dengqian/WebstormProjects/BG220_Server/node_modules/ftp/lib/connection.js:304:24)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+[2020-04-22 15:46:16.355] [INFO] app - come in test_server
+[2020-04-22 15:46:16.891] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&6ca7a7d9-a613-4145-a2af-ad6608390ad6.pcm.wav:file_upload:本部文件上传完成
+[2020-04-22 15:46:26.895] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-22 15:50:44.343] [INFO] app - come in test_server
+[2020-04-22 15:50:44.633] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&6ca7a7d9-a613-4145-a2af-ad6608390ad6.pcm.wav:file_upload:本部文件上传完成
+[2020-04-22 15:50:54.636] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-22 15:50:54.637] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200422:判断目录存在异常
+[2020-04-22 15:50:54.637] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&6ca7a7d9-a613-4145-a2af-ad6608390ad6.pcm.wav :目录检测失败
+[2020-04-22 15:54:25.788] [INFO] app - come in test_server
+[2020-04-22 15:54:26.107] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&6ca7a7d9-a613-4145-a2af-ad6608390ad6.pcm.wav:file_upload:本部文件上传完成
+[2020-04-22 15:54:36.113] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-22 15:54:36.113] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200422:判断目录存在异常
+[2020-04-22 15:54:36.113] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&6ca7a7d9-a613-4145-a2af-ad6608390ad6.pcm.wav :目录检测失败
+[2020-04-22 15:54:36.119] [INFO] app - write_upload_failure_list_透传失败数据已经保存
+[2020-04-22 15:54:36.119] [INFO] app - write_upload_failure_list_透传失败数据已经保存
+[2020-04-22 16:13:31.209] [INFO] app - come in test_server
+[2020-04-22 16:13:31.523] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&4409cca0-a7fd-450e-9da4-6de6deda2340.pcm.wav:file_upload:本部文件上传完成
+[2020-04-22 16:13:41.527] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-22 16:13:41.527] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200422:判断目录存在异常
+[2020-04-22 16:13:41.528] [INFO] app - 9d25f03b-fd29-419b-a029-37d1f25fa742&4409cca0-a7fd-450e-9da4-6de6deda2340.pcm.wav :目录检测失败
+[2020-04-22 16:13:41.536] [INFO] app - write_upload_failure_list_透传失败数据已经保存
+[2020-04-22 16:13:41.538] [INFO] app - write_upload_failure_list_透传失败数据已经保存

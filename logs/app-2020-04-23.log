@@ -1,0 +1,35 @@
+[2020-04-23 10:10:54.516] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-23 10:10:54.521] [INFO] app - TypeError: Cannot read property 'info' of undefined
+    at /Users/dengqian/WebstormProjects/BG220_Server/test.js:55:32
+    at ClientRequest.<anonymous> (/Users/dengqian/WebstormProjects/BG220_Server/test.js:147:33)
+    at ClientRequest.emit (events.js:311:20)
+    at Socket.socketErrorListener (_http_client.js:426:9)
+    at Socket.emit (events.js:311:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2020-04-23 11:24:26.127] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-23 11:24:26.131] [INFO] app - ReferenceError: date is not defined
+    at do_wav_upload (/Users/dengqian/WebstormProjects/BG220_Server/test.js:157:57)
+    at Timeout.do_it [as _onTimeout] (/Users/dengqian/WebstormProjects/BG220_Server/test.js:41:25)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+[2020-04-23 11:25:15.801] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 11:25:15.803] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 11:27:29.345] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 11:27:29.347] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 11:28:54.483] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 11:28:54.484] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 11:32:27.316] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 11:32:27.318] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 11:35:51.207] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 11:35:51.211] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 11:37:16.338] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 11:37:16.339] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 11:52:23.662] [INFO] app - { inspect: [Function: inspect] }
+[2020-04-23 11:52:23.664] [INFO] app - ReferenceError: con is not defined
+    at Timeout.do_it [as _onTimeout] (/Users/dengqian/WebstormProjects/BG220_Server/test.js:28:25)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+[2020-04-23 14:23:00.644] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:23:00.653] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常

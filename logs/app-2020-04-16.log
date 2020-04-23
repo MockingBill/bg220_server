@@ -1,0 +1,28 @@
+[2020-04-16 09:18:28.343] [INFO] app - come in test_server
+[2020-04-16 09:18:48.938] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&62ca05c4-3490-4873-bf59-0459ee5502ce.pcm.wav:file_upload:本部文件上传完成
+[2020-04-16 18:39:29.949] [INFO] app - come in test_server
+[2020-04-16 18:42:44.419] [INFO] app - come in test_server
+[2020-04-16 18:42:44.857] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&b7cd9f0e-5859-4966-803d-96b4ba2c61e3.pcm.wav:file_upload:本部文件上传完成
+[2020-04-16 18:42:44.901] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&b7cd9f0e-5859-4966-803d-96b4ba2c61e3.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-16 18:42:44.906] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-16 18:53:59.597] [INFO] app - come in test_server
+[2020-04-16 18:54:20.043] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&d7ec48c7-669d-4019-aaef-860e78d5dc21.pcm.wav:file_upload:本部文件上传完成
+[2020-04-16 18:54:20.097] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&d7ec48c7-669d-4019-aaef-860e78d5dc21.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-16 18:54:20.102] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-16 18:55:26.882] [INFO] app - come in test_server
+[2020-04-16 18:58:39.787] [INFO] app - come in test_server
+[2020-04-16 18:58:40.037] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&be83f617-2d27-4b58-a7dc-20d596dc2879.pcm.wav:file_upload:本部文件上传完成
+[2020-04-16 18:58:40.070] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&be83f617-2d27-4b58-a7dc-20d596dc2879.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-16 18:58:40.072] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-16 19:03:31.099] [INFO] app - come in test_server
+[2020-04-16 19:05:39.149] [INFO] app - come in test_server
+[2020-04-16 19:05:39.598] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&c9611c61-81ec-4259-b6cf-a08a18504e93.pcm.wav:file_upload:本部文件上传完成
+[2020-04-16 19:05:39.639] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&c9611c61-81ec-4259-b6cf-a08a18504e93.pcm.wav :ftp上传失败：Error: Could not create file.
+[2020-04-16 19:05:39.644] [INFO] app - write_upload_failure_list_保存透传失败数据失败
+[2020-04-16 19:10:07.991] [INFO] app - come in test_server
+[2020-04-16 19:10:28.827] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&a78a4e0d-6f47-486f-8123-d5a3690fbae4.pcm.wav:file_upload:本部文件上传完成
+[2020-04-16 19:10:28.889] [INFO] app - 4ca8dabd-3c5a-4824-81ab-4c343201bd4e&a78a4e0d-6f47-486f-8123-d5a3690fbae4.pcm.wav :ftp上传成功
+[2020-04-16 19:10:28.990] [INFO] app - 透传接口返回结果: {"result":"0","errorcode":"001","msg":"没有查询到拨测任务"}
+[2020-04-16 19:10:28.992] [INFO] app - json数据透传失败：
+[2020-04-16 19:10:28.992] [INFO] app - {"result":"0","errorcode":"001","msg":"没有查询到拨测任务"}
+[2020-04-16 19:10:49.020] [INFO] app - write_upload_failure_list_保存透传失败数据失败
