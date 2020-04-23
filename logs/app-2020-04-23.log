@@ -33,3 +33,31 @@
     at processTimers (internal/timers.js:492:7)
 [2020-04-23 14:23:00.644] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
 [2020-04-23 14:23:00.653] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:04.921] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:04.922] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:05.907] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:05.907] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:06.910] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:06.910] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:07.911] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:07.912] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:08.920] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:08.920] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:09.924] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:09.925] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:10.924] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:10.925] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:11.928] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:11.929] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:12.931] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:12.931] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:13.933] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:13.934] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:14.937] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:14.938] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:15.934] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:15.934] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:16.935] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:16.935] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常
+[2020-04-23 14:44:17.936] [INFO] app - ftp出现错误:Error: Timeout while connecting to server
+[2020-04-23 14:44:17.937] [INFO] app - /home/yingyong/files/boce/ftpfile/dir_20200423:判断目录存在异常

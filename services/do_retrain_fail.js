@@ -1,89 +1,97 @@
 let Client = require('ftp');
-let config = require('./ConnConfig').config;
+let config = require('../ConnConfig').config;
 var c = new Client();
-let app = require('./app');
+let app = require('../app');
 var mysql = require('mysql');
 var mysqlPoll = mysql.createPool(config.mysql_config);
 var http = require('http');
-var ftp_service = require("./services/ftp_service");
+var ftp_service = require("./ftp_service");
 var path = require('path');
 var date = require("silly-datetime");
 
-mysqlPoll.getConnection(function (err, con) {
-    if (err) {
-        console.log("query_fail_list" + err);
-    } else {
-        var sql = "select * from failure_list";
-        con.query(sql, [], function (err, row) {
-            con.release();
-            var loop_num = row.length;
-            var loop_item = 0;
-            var interval = 1;
-            (function schedule() {
-                setTimeout(function do_it() {
 
-                    if (loop_item < loop_num) {
-                        var test_id = row[loop_item].test_id;
-                        var check_id = row[loop_item].check_id;
-                        var type = row[loop_item].type;
-                        var local_url = test_id + "&" + check_id + ".pcm.wav";
-                        if (type == 'json') {
-                            do_json_upload("9d25f03b-fd29-419b-a029-37d1f25fa742", "6ca7a7d9-a613-4145-a2af-ad6608390ad6", function (error) {
-                                if (error) {
-                                    console.log(error);
-                                    console.log("9d25f03b-fd29-419b-a029-37d1f25fa742 6ca7a7d9-a613-4145-a2af-ad6608390ad6 json失败");
-                                    console.log("--------------*****-----------------------*****------------------");
+/**
+ * 自动按周期执行失败透传重传机制
+ */
 
-                                } else {
-                                    console.log("9d25f03b-fd29-419b-a029-37d1f25fa742 6ca7a7d9-a613-4145-a2af-ad6608390ad6 json成功");
-                                    do_delete(test_id, check_id, type, function (err) {
-                                        if (err) {
+var time_interval = 1000 * 60 * 5;
 
-                                        } else {
-                                            console.log("删除失败记录成功");
-                                        }
+setInterval(function () {
+    do_main();
+}, time_interval);
 
-                                    });
-                                    console.log("--------------*****-----------------------*****------------------");
-                                }
+function do_main() {
+    mysqlPoll.getConnection(function (err, con) {
+        if (err) {
+            console.log("query_fail_list" + err);
+        } else {
+            var sql = "select * from failure_list";
+            con.query(sql, [], function (err, row) {
+                con.release();
+                var loop_num = row.length;
+                var loop_item = 0;
+                var interval = 1;
+                (function schedule() {
+                    setTimeout(function do_it() {
+                        if (loop_item < loop_num) {
+                            var test_id = row[loop_item].test_id;
+                            var check_id = row[loop_item].check_id;
+                            var type = row[loop_item].type;
+                            var local_url = test_id + "&" + check_id + ".pcm.wav";
+                            if (type == 'json') {
+                                do_json_upload(test_id, check_id, function (error) {
+                                    if (error) {
+                                        console.log(error);
+                                        console.log(test_id+" "+check_id+" json失败");
+                                        console.log("--------------*****-----------------------*****------------------");
+                                    } else {
+                                        console.log(test_id+" "+check_id+" json成功");
+                                        do_delete(test_id, check_id, type, function (err) {
+                                            if (err) {
+
+                                            } else {
+                                                console.log("删除失败记录成功");
+                                            }
+
+                                        });
+                                        console.log("--------------*****-----------------------*****------------------");
+                                    }
+                                    loop_item++;
+                                    schedule();
+                                })
+                            } else if (type == 'wav') {
+                                do_wav_upload(local_url, function (err) {
+                                    if (err) {
+                                        console.log(local_url + " 失败");
+                                        console.log("--------------*****-----------------------*****------------------");
+                                    } else {
+                                        console.log(local_url + " 成功");
+                                        do_delete(test_id, check_id, type, function (err) {
+                                            if (err) {
+
+                                            } else {
+                                                console.log("删除失败记录成功");
+                                            }
+                                        });
+                                        console.log("--------------*****-----------------------*****------------------");
+
+                                    }
+                                    loop_item++;
+                                    schedule();
+                                })
+                            } else {
                                 loop_item++;
                                 schedule();
-                            })
-                        } else if (type == 'wav') {
-                            do_wav_upload(local_url, function (err) {
-                                if (err) {
-                                    console.log(local_url + " 失败");
-                                    console.log("--------------*****-----------------------*****------------------");
-                                } else {
-                                    console.log(local_url + " 成功");
-                                    do_delete(test_id, check_id, type, function (err) {
-                                        if (err) {
-
-                                        } else {
-                                            console.log("删除失败记录成功");
-                                        }
-                                    });
-                                    console.log("--------------*****-----------------------*****------------------");
-
-                                }
-                                loop_item++;
-                                schedule();
-                            })
+                            }
                         } else {
-                            loop_item++;
-                            schedule();
+                            console.log("本期循环结束。")
                         }
-                    } else {
-                        console.log("本期循环结束。")
-                    }
-                }, interval)
-            }());
-
-
-        });
-    }
-
-});
+                    }, interval)
+                }());
+            });
+        }
+    });
+}
 
 
 function do_json_upload(test_id, check_id, cb) {
